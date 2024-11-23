@@ -12,5 +12,6 @@ redhat.ansible
 redhat.vscode-yaml
 streetsidesoftware.code-spell-checker
 timonwong.shellcheck
+vintharas.learn-vim
 vscodevim.vim
 wayou.vscode-todo-highlight
