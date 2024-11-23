@@ -1,0 +1,16 @@
+foxundermoon.shell-format
+hashicorp.terraform
+matangover.mypy
+ms-azuretools.vscode-docker
+ms-python.black-formatter
+ms-python.debugpy
+ms-python.flake8
+ms-python.python
+ms-python.vscode-pylance
+ms-vscode-remote.remote-containers
+redhat.ansible
+redhat.vscode-yaml
+streetsidesoftware.code-spell-checker
+timonwong.shellcheck
+vscodevim.vim
+wayou.vscode-todo-highlight

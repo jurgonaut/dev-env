@@ -1,0 +1,19 @@
+{
+    "vim.useSystemClipboard": true,
+    "editor.lineNumbers": "relative",
+    "files.insertFinalNewline": true,
+    "editor.formatOnSave": true,
+    "workbench.settings.applyToAllProfiles": [
+        "editor.formatOnSave"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.tabSize": 4,
+        "editor.formatOnSaveMode": "modifications",
+        "editor.formatOnType": true,
+        "editor.formatOnPaste": true
+    },
+    "flake8.args": [
+        "--max-line-length=120"
+    ]
+}
