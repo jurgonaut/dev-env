@@ -70,7 +70,7 @@ ZSH_THEME="lukerandall"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,3 +102,23 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+[ -f ~/.resh/shellrc ] && source ~/.resh/shellrc # this line was added by RESH
+
+# CUSTOM
+
+# Minkube
+alias mkubectl="minikube kubectl --"
+
+# Unique tmux histories for each pane
+if [[ $TMUX_PANE ]]; then
+    # Remove any previous history files
+    # We need to set `nullglob` to prevent errors
+    # if there are not matches
+    setopt nullglob
+    rm -f -- ~/.bash_history_tmux*
+    # Reverse the previous nullglob just in case
+    unsetopt nullglob
+    # Set unique history file for each tmux pane
+    HISTFILE=$HOME/.bash_history_tmux_${TMUX_PANE:1}
+fi
